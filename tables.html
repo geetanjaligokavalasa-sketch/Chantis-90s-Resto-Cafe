@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Tummy - Tables</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">🍽️ Happy Tummy Restaurant</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="orders.html">Orders</a>
+      <a href="tables.html" class="active">Tables</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section id="tables">
+    <h2>Restaurant Tables</h2>
+    <div class="tables-container">
+      <div class="tables-card">
+        <h3>Manage Tables</h3>
+        <p>Total Tables: <span id="total-tables-count">0</span></p>
+        <p>Reserved Tables: <span id="reserved-tables-count">0</span></p>
+        <p>Available Tables: <span id="available-tables-count">0</span></p>
+
+        <input type="text" id="table-name" placeholder="Add table name" />
+        <button onclick="addTable()">Add Table</button>
+
+        <h4>Table List</h4>
+        <ul id="table-list"></ul>
+      </div>
+
+      <div class="tables-card">
+        <h3>Orders by Table</h3>
+        <ul id="table-orders-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Happy Tummy Restaurant. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

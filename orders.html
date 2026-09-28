@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Tummy - Orders</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">🍽️ Happy Tummy Restaurant</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="orders.html" class="active">Orders</a>
+      <a href="tables.html">Tables</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section id="orders">
+    <h2>Your Orders</h2>
+
+    <div id="cart-items"></div>
+    <p id="total-price">Total: ₹0.00</p>
+
+    <div class="place-order-container">
+      <button id="place-order" onclick="placeOrder()">Place Order</button>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Happy Tummy Restaurant. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

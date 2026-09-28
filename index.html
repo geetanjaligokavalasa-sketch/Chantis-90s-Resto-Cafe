@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chanti's 90's RESTO CAFE</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ==================================================
+       HEADER
+       ================================================== -->
+
+  <header>
+
+    <div class="logo">
+      🍽️ Chanti's 90's RESTO CAFE
+    </div>
+
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="orders.html">Orders</a>
+      <a href="tables.html">Tables</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </header>
+
+
+  <!-- ==================================================
+       FULL SCREEN HERO VIDEO
+       ================================================== -->
+
+  <section class="hero">
+
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      class="hero-video"
+      preload="auto">
+
+      <source src="Restuarant video.mp4" type="video/mp4">
+
+      Your browser does not support the video tag.
+
+    </video>
+
+
+    <!-- Text displayed over the video -->
+
+    <div class="hero-text">
+
+      <h1>Welcome to Chanti's 90's RESTO CAFE</h1>
+
+      <p>Delicious Food. Happy Moments.</p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================================================
+       FOOTER
+       ================================================== -->
+
+  <footer>
+
+    <p>
+      © 2026 Chanti's 90's RESTO CAFE. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- ==================================================
+       ENABLE VIDEO AUDIO AFTER USER INTERACTION
+       ================================================== -->
+
+  <script>
+
+    const heroVideo = document.querySelector(".hero-video");
+
+    function enableVideoAudio() {
+
+      heroVideo.muted = false;
+      heroVideo.volume = 1;
+
+      heroVideo.play().catch(function(error) {
+        console.log("Video playback could not start:", error);
+      });
+
+      document.removeEventListener("click", enableVideoAudio);
+      document.removeEventListener("touchstart", enableVideoAudio);
+      document.removeEventListener("keydown", enableVideoAudio);
+
+    }
+
+    document.addEventListener("click", enableVideoAudio);
+    document.addEventListener("touchstart", enableVideoAudio);
+    document.addEventListener("keydown", enableVideoAudio);
+
+  </script>
+
+</body>
+</html>
+
+

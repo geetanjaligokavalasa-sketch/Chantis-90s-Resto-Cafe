@@ -1,0 +1,842 @@
+```css
+/* ======================================================
+   GENERAL STYLING
+   ====================================================== */
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #333;
+  scroll-behavior: smooth;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ======================================================
+   HEADER
+   ====================================================== */
+
+header {
+  position: sticky;
+  top: 0;
+
+  background: #a83232;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 2rem;
+
+  z-index: 1000;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: #f2c94c;
+}
+
+
+/* ======================================================
+   HERO SECTION - FULL SCREEN VIDEO
+   ====================================================== */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  height: calc(100vh - 80px);
+
+  min-height: 500px;
+
+  overflow: hidden;
+
+  text-align: center;
+  color: white;
+
+  flex: 1;
+}
+
+
+/* ======================================================
+   BACKGROUND VIDEO
+   ====================================================== */
+
+.hero-video {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* ======================================================
+   DARK OVERLAY OVER VIDEO
+   ====================================================== */
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* ======================================================
+   TEXT ON TOP OF VIDEO
+   ====================================================== */
+
+.hero-text {
+  position: absolute;
+
+  top: 8%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 90%;
+
+  text-align: center;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+
+  color: #fff;
+
+  margin: 0 0 10px 0;
+
+  text-shadow:
+    2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+
+  color: #fff;
+
+  margin: 0;
+
+  text-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+/* ======================================================
+   BUTTON
+   ====================================================== */
+
+.btn {
+  background: #f2c94c;
+
+  color: #a83232;
+
+  padding: 10px 20px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-weight: bold;
+}
+
+
+/* ======================================================
+   MENU SECTION
+   ====================================================== */
+
+#menu {
+  text-align: center;
+  padding: 2rem;
+}
+
+.menu-filters button {
+  background: #a83232;
+
+  color: white;
+
+  border: none;
+
+  padding: 8px 15px;
+
+  margin: 5px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.menu-container {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  margin-top: 1rem;
+}
+
+.menu-item {
+  background: #fff;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.1);
+
+  width: 250px;
+
+  margin: 1rem;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.menu-item img {
+  width: 100%;
+
+  height: 150px;
+
+  object-fit: cover;
+}
+
+.menu-item h3 {
+  margin: 0.5rem 0;
+}
+
+.menu-item .price {
+  color: #a83232;
+
+  font-weight: bold;
+}
+
+.menu-item button {
+  background: #f2c94c;
+
+  border: none;
+
+  padding: 8px 12px;
+
+  margin-bottom: 1rem;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+
+/* ======================================================
+   MENU QUANTITY CONTROLS
+   ====================================================== */
+
+.cart-controls {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding-bottom: 1rem;
+}
+
+.quantity-controls {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.quantity-btn {
+  background: #f2c94c;
+
+  color: #333;
+
+  border: none;
+
+  width: 36px;
+  height: 36px;
+
+  padding: 0;
+
+  margin: 0 !important;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  pointer-events: auto;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+.quantity-btn:hover {
+  background: #e5b936;
+}
+
+.quantity-value {
+  min-width: 30px;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  text-align: center;
+}
+
+.add-cart-btn {
+  background: #a83232 !important;
+
+  color: white;
+
+  border: none;
+
+  padding: 8px 18px;
+
+  margin: 0 !important;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  pointer-events: auto;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+.add-cart-btn:hover {
+  background: #922b2b !important;
+}
+
+
+/* ======================================================
+   ORDERS SECTION
+   ====================================================== */
+
+#orders {
+  flex: 1;
+
+  text-align: center;
+
+  padding: 2rem;
+
+  background: #fff8f8;
+}
+
+
+/* ======================================================
+   CART ITEMS
+   ====================================================== */
+
+#cart-items {
+  width: 90%;
+
+  max-width: 700px;
+
+  margin: 1rem auto;
+}
+
+.cart-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: white;
+
+  border: 1px solid #eee;
+
+  border-radius: 8px;
+
+  padding: 12px 15px;
+
+  margin: 8px 0;
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.cart-item-details {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.cart-item button {
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 18px;
+}
+
+
+/* ======================================================
+   PLACE ORDER
+   ====================================================== */
+
+.place-order-container {
+  margin: 1.5rem 0;
+
+  text-align: center;
+}
+
+#place-order {
+  background: #a83232;
+
+  color: white;
+
+  padding: 12px 24px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+
+  transition: background 0.3s ease;
+}
+
+#place-order:hover {
+  background: #922b2b;
+}
+
+
+/* ======================================================
+   ORDERS SUMMARY
+   ====================================================== */
+
+.orders-summary {
+  margin: 1rem auto;
+
+  background: #fff0f0;
+
+  border-radius: 10px;
+
+  padding: 1.5rem;
+
+  display: inline-block;
+
+  text-align: left;
+
+  border: 1px solid #eee;
+}
+
+.orders-summary h3 {
+  color: #a83232;
+
+  margin-bottom: 0.5rem;
+}
+
+
+/* ======================================================
+   CONTACT SECTION
+   ====================================================== */
+
+#contact {
+  padding: 2rem;
+
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 80%;
+
+  max-width: 400px;
+
+  margin: 0.5rem 0;
+
+  padding: 10px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background: #a83232;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 20px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+
+/* ======================================================
+   FOOTER
+   ====================================================== */
+
+footer {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  background: #a83232;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 15px 10px;
+
+  margin: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  position: relative;
+
+  z-index: 10;
+}
+
+footer p {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* ======================================================
+   TABLES SECTION
+   ====================================================== */
+
+#tables {
+  flex: 1;
+
+  background: #fff8f8;
+
+  padding: 2rem;
+
+  text-align: center;
+}
+
+.tables-container {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 1.5rem;
+}
+
+.tables-card {
+  background: #fff;
+
+  border: 1px solid #eee;
+
+  border-radius: 10px;
+
+  padding: 1.5rem;
+
+  width: 300px;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.1);
+
+  text-align: left;
+}
+
+.tables-card h3 {
+  color: #a83232;
+
+  text-align: center;
+
+  margin-bottom: 1rem;
+}
+
+.tables-card button {
+  background: #f2c94c;
+
+  border: none;
+
+  padding: 8px 12px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  margin-top: 0.5rem;
+}
+
+.table-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: #fff;
+
+  border: 1px solid #eee;
+
+  padding: 5px 10px;
+
+  border-radius: 5px;
+
+  margin: 4px 0;
+}
+
+
+/* ======================================================
+   ACTIVE NAVIGATION
+   ====================================================== */
+
+nav a.active {
+  color: #f2c94c;
+
+  border-bottom: 2px solid #f2c94c;
+}
+
+
+/* ======================================================
+   RESPONSIVE / MOBILE
+   ====================================================== */
+
+@media (max-width: 768px) {
+
+  /* ------------------------------
+     MOBILE MENU
+     ------------------------------ */
+
+  .menu-container {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+
+  /* ------------------------------
+     MOBILE HEADER
+     ------------------------------ */
+
+  header {
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding: 12px 8px;
+
+    text-align: center;
+  }
+
+  header .logo {
+    font-size: 18px;
+
+    text-align: center;
+  }
+
+  header nav {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 4px;
+  }
+
+  header nav a {
+    margin: 0 5px;
+
+    font-size: 14px;
+  }
+
+
+  /* ------------------------------
+     MOBILE HERO VIDEO
+     ------------------------------ */
+
+  .hero {
+    width: 100%;
+
+    height: calc(100vh - 120px);
+
+    min-height: 450px;
+
+    flex: 1;
+  }
+
+  .hero-video {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+
+  /* ------------------------------
+     MOBILE HERO TEXT
+     ------------------------------ */
+
+  .hero-text {
+    top: 6%;
+
+    width: 92%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+
+    line-height: 1.4;
+  }
+
+
+  /* ------------------------------
+     MOBILE CART
+     ------------------------------ */
+
+  .cart-item {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .cart-item-details {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+
+  /* ------------------------------
+     MOBILE FOOTER
+     ------------------------------ */
+
+  footer {
+    width: 100%;
+
+    background: #a83232;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 12px 8px;
+
+    margin: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+  }
+
+  footer p {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+  }
+
+}
+

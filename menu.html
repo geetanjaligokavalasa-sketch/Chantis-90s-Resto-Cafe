@@ -1,0 +1,202 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Tummy Restaurant - Menu</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="logo">
+      🍽️ Happy Tummy Restaurant
+    </div>
+
+    <nav>
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="menu.html" class="active">
+        Menu
+      </a>
+
+      <a href="orders.html">
+        Orders
+      </a>
+
+      <a href="tables.html">
+        Tables
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- MENU -->
+  <section id="menu">
+
+    <h2>Our Menu</h2>
+
+
+    <!-- FILTER BUTTONS -->
+    <div class="menu-filters">
+
+      <button type="button" onclick="filterMenu('all')">
+        All
+      </button>
+
+      <button type="button" onclick="filterMenu('starters')">
+        Starters
+      </button>
+
+      <button type="button" onclick="filterMenu('main')">
+        Main Course
+      </button>
+
+      <button type="button" onclick="filterMenu('desserts')">
+        Desserts
+      </button>
+
+      <button type="button" onclick="filterMenu('drinks')">
+        Drinks
+      </button>
+
+    </div>
+
+
+    <!-- MENU CONTAINER -->
+    <div class="menu-container" id="menu-container">
+
+
+      <!-- CHICKEN MANCHURIAN -->
+      <div
+        class="menu-item"
+        data-category="starters"
+        data-name="Chicken Manchurian"
+        data-price="150">
+
+        <img
+          src="chicken manchurian.jpeg"
+          alt="Chicken Manchurian">
+
+        <h3>Chicken Manchurian</h3>
+
+        <p class="price">
+          ₹150
+        </p>
+
+        <div class="cart-controls">
+
+          <div class="quantity-controls">
+
+            <button
+              type="button"
+              class="quantity-btn minus-btn">
+              −
+            </button>
+
+            <span
+              class="quantity-value"
+              id="qty-Chicken-Manchurian"
+              data-name="Chicken Manchurian">
+              0
+            </span>
+
+            <button
+              type="button"
+              class="quantity-btn plus-btn">
+              +
+            </button>
+
+          </div>
+
+          <button
+            type="button"
+            class="add-cart-btn">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHICKEN BIRYANI -->
+      <div
+        class="menu-item"
+        data-category="main"
+        data-name="Chicken Biryani"
+        data-price="250">
+
+        <img
+          src="chicken.jpeg"
+          alt="Chicken Biryani">
+
+        <h3>Chicken Biryani</h3>
+
+        <p class="price">
+          ₹250
+        </p>
+
+        <div class="cart-controls">
+
+          <div class="quantity-controls">
+
+            <button
+              type="button"
+              class="quantity-btn minus-btn">
+              −
+            </button>
+
+            <span
+              class="quantity-value"
+              id="qty-Chicken-Biryani"
+              data-name="Chicken Biryani">
+              0
+            </span>
+
+            <button
+              type="button"
+              class="quantity-btn plus-btn">
+              +
+            </button>
+
+          </div>
+
+          <button
+            type="button"
+            class="add-cart-btn">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+```
